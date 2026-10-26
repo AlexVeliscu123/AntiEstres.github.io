@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calma · Juegos antiestrés</title>
+  <meta name="description" content="Pequeños juegos para desconectar: un ciempiés y una tarántula que siguen tu cursor, fidget spinners personalizables, un teclado gaming con montones de sonidos, juegos de coches, Flappy con animales, serpiente, laberinto, un puzle de bloques, un cubo de Rubik 3D y una cara que se estira como chicle.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐛%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <a class="brand" href="#home" title="Volver al menú">Calma<span>.</span></a>
+
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <button class="tab" role="tab" id="tab-centipede" data-view="centipede" aria-controls="view-centipede" aria-selected="false">
+        <span class="ico" aria-hidden="true">🐛</span><span class="lbl">Ciempiés</span>
+      </button>
+      <button class="tab" role="tab" id="tab-tarantula" data-view="tarantula" aria-controls="view-tarantula" aria-selected="false">
+        <span class="ico" aria-hidden="true">🕷️</span><span class="lbl">Tarántula</span>
+      </button>
+      <button class="tab" role="tab" id="tab-spinner" data-view="spinner" aria-controls="view-spinner" aria-selected="false">
+        <span class="ico" aria-hidden="true">🌀</span><span class="lbl">Spinner</span>
+      </button>
+      <button class="tab" role="tab" id="tab-keyboard" data-view="keyboard" aria-controls="view-keyboard" aria-selected="false">
+        <span class="ico" aria-hidden="true">⌨️</span><span class="lbl">Teclado</span>
+      </button>
+      <button class="tab" role="tab" id="tab-cars" data-view="cars" aria-controls="view-cars" aria-selected="false">
+        <span class="ico" aria-hidden="true">🚗</span><span class="lbl">Coches</span>
+      </button>
+      <button class="tab" role="tab" id="tab-flappy" data-view="flappy" aria-controls="view-flappy" aria-selected="false">
+        <span class="ico" aria-hidden="true">🐥</span><span class="lbl">Flappy</span>
+      </button>
+      <button class="tab" role="tab" id="tab-snake" data-view="snake" aria-controls="view-snake" aria-selected="false">
+        <span class="ico" aria-hidden="true">🐍</span><span class="lbl">Serpiente</span>
+      </button>
+      <button class="tab" role="tab" id="tab-pac" data-view="pac" aria-controls="view-pac" aria-selected="false">
+        <span class="ico" aria-hidden="true">🟡</span><span class="lbl">Laberinto</span>
+      </button>
+      <button class="tab" role="tab" id="tab-blox" data-view="blox" aria-controls="view-blox" aria-selected="false">
+        <span class="ico" aria-hidden="true">🧊</span><span class="lbl">Bloque</span>
+      </button>
+      <button class="tab" role="tab" id="tab-rubik" data-view="rubik" aria-controls="view-rubik" aria-selected="false">
+        <span class="ico" aria-hidden="true">🧩</span><span class="lbl">Rubik</span>
+      </button>
+      <button class="tab" role="tab" id="tab-chicle" data-view="chicle" aria-controls="view-chicle" aria-selected="false">
+        <span class="ico" aria-hidden="true">😝</span><span class="lbl">Chicle</span>
+      </button>
+    </nav>
+
+    <button id="sound-btn" class="sound-btn" aria-pressed="true" aria-label="Activar o silenciar el sonido" title="Sonido">🔊</button>
+
+    <main>
+      <!-- ============ INICIO ============ -->
+      <section id="view-home" class="view" aria-label="Elige un juego">
+        <h1 class="home-title">¿A qué quieres jugar?</h1>
+        <p class="home-sub">Elige uno para desconectar un rato</p>
+        <div class="cards">
+          <button class="card" data-view="centipede">
+            <span class="big" aria-hidden="true">🐛</span>
+            <span class="txt"><b>Ciempiés</b><span>Gigante, con 56 patas que caminan</span></span>
+          </button>
+          <button class="card" data-view="tarantula">
+            <span class="big" aria-hidden="true">🕷️</span>
+            <span class="txt"><b>Tarántula</b><span>Peluda, con 8 patas articuladas</span></span>
+          </button>
+          <button class="card" data-view="spinner">
+            <span class="big" aria-hidden="true">🌀</span>
+            <span class="txt"><b>Spinner</b><span>9 modelos y todo personalizable</span></span>
+          </button>
+          <button class="card" data-view="keyboard">
+            <span class="big" aria-hidden="true">⌨️</span>
+            <span class="txt"><b>Teclado</b><span>Modo gaming: RGB, combos y 14 sonidos</span></span>
+          </button>
+          <button class="card" data-view="cars">
+            <span class="big" aria-hidden="true">🚗</span>
+            <span class="txt"><b>Coches</b><span>Esquiva el tráfico y pasa rozando</span></span>
+          </button>
+          <button class="card" data-view="flappy">
+            <span class="big" aria-hidden="true">🐥</span>
+            <span class="txt"><b>Flappy</b><span>Vuela entre tuberías con 8 animales</span></span>
+          </button>
+          <button class="card" data-view="snake">
+            <span class="big" aria-hidden="true">🐍</span>
+            <span class="txt"><b>Serpiente</b><span>Come fruta y crece sin chocar</span></span>
+          </button>
+          <button class="card" data-view="pac">
+            <span class="big" aria-hidden="true">🟡</span>
+            <span class="txt"><b>Laberinto</b><span>Laberintos aleatorios y 4 fantasmas</span></span>
+          </button>
+          <button class="card" data-view="blox">
+            <span class="big" aria-hidden="true">🧊</span>
+            <span class="txt"><b>Bloque</b><span>Rueda el bloque hasta el hueco</span></span>
+          </button>
+          <button class="card" data-view="rubik">
+            <span class="big" aria-hidden="true">🧩</span>
+            <span class="txt"><b>Rubik</b><span>Cubo 3×3 en 3D: mezcla y resuelve</span></span>
+          </button>
+          <button class="card" data-view="chicle">
+            <span class="big" aria-hidden="true">😝</span>
+            <span class="txt"><b>Chicle</b><span>Estira la cara de animales y personas</span></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ CIEMPIÉS ============ -->
+      <section id="view-centipede" class="view ground" role="tabpanel" aria-labelledby="tab-centipede" hidden>
+        <canvas id="centi-canvas" class="arena-canvas" aria-label="Un ciempiés que sigue tu cursor o tu dedo"></canvas>
+        <p class="hint" id="centi-hint">Mueve el cursor o toca la pantalla · un click = ¡sprint!</p>
+      </section>
+
+      <!-- ============ TARÁNTULA ============ -->
+      <section id="view-tarantula" class="view ground" role="tabpanel" aria-labelledby="tab-tarantula" hidden>
+        <canvas id="tara-canvas" class="arena-canvas" aria-label="Una tarántula que sigue tu cursor o tu dedo"></canvas>
+        <p class="hint" id="tara-hint">Mueve el cursor o toca la pantalla · un click = ¡salto!</p>
+      </section>
+
+      <!-- ============ SPINNER ============ -->
+      <section id="view-spinner" class="view" role="tabpanel" aria-labelledby="tab-spinner" hidden
+               data-finish="solid" data-bg="night" data-glow="on">
+        <div class="spin-pad" id="spin-pad">
+          <div class="spinner-wrap">
+            <div class="halo"></div>
+            <svg id="spinner" viewBox="-110 -110 220 220" role="img" aria-label="Fidget spinner">
+              <defs>
+                <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f1f3f6"/>
+                  <stop offset=".55" stop-color="#b9c0ca"/>
+                  <stop offset="1" stop-color="#7d8794"/>
+                </linearGradient>
+                <linearGradient id="gSoft" gradientUnits="userSpaceOnUse" x1="-90" y1="-90" x2="90" y2="90">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".28"/>
+                  <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+                </linearGradient>
+                <linearGradient id="gMetal" gradientUnits="userSpaceOnUse" x1="-90" y1="-90" x2="90" y2="90">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".75"/>
+                  <stop offset=".35" stop-color="#fff" stop-opacity=".05"/>
+                  <stop offset=".6" stop-color="#000" stop-opacity=".25"/>
+                  <stop offset=".8" stop-color="#fff" stop-opacity=".35"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+                </linearGradient>
+                <linearGradient id="gGlass" gradientUnits="userSpaceOnUse" x1="-90" y1="-90" x2="90" y2="90">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+                  <stop offset=".5" stop-color="#fff" stop-opacity=".05"/>
+                  <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+                </linearGradient>
+                <radialGradient id="gShine" cx=".35" cy=".3" r=".75">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+                  <stop offset=".45" stop-color="#fff" stop-opacity=".12"/>
+                  <stop offset="1" stop-color="#000" stop-opacity=".45"/>
+                </radialGradient>
+              </defs>
+              <g id="spinner-rot"></g>
+            </svg>
+          </div>
+
+          <div class="stats" aria-live="off">
+            <div><b id="spin-rpm">0</b><span>RPM</span></div>
+            <div><b id="spin-turns">0</b><span>vueltas</span></div>
+            <div><b id="spin-best">0</b><span>récord RPM</span></div>
+          </div>
+
+          <button id="cfg-btn" class="cfg-btn" aria-controls="spin-panel">🎨 Personalizar</button>
+          <p class="hint">Arrástralo y suéltalo con impulso · toca para darle un empujón · Espacio también</p>
+        </div>
+
+        <aside class="panel" id="spin-panel" aria-label="Personalizar el spinner">
+          <div class="panel-head">
+            <h2>Personalizar</h2>
+            <button class="x" id="cfg-close" aria-label="Cerrar">✕</button>
+          </div>
+          <div class="grp"><h3>Modelo</h3><div id="opt-model" class="models"></div></div>
+          <div class="grp"><h3>Color principal</h3><div id="opt-c1" class="swatches"></div></div>
+          <div class="grp"><h3>Color secundario</h3><div id="opt-c2" class="swatches"></div></div>
+          <div class="grp"><h3>Acabado</h3><div id="opt-finish" class="chips"></div></div>
+          <div class="grp"><h3>Pesos</h3><div id="opt-cap" class="chips"></div></div>
+          <div class="grp">
+            <h3>Rozamiento</h3>
+            <input type="range" id="opt-fric" min="1" max="5" step="1" aria-label="Rozamiento">
+            <div class="range-lbl"><span>Gira más</span><span>Frena antes</span></div>
+          </div>
+          <div class="grp"><h3>Fondo</h3><div id="opt-bg" class="chips"></div></div>
+          <div class="grp"><label class="check"><input type="checkbox" id="opt-glow"> Resplandor al girar</label></div>
+          <div class="grp row">
+            <button class="chip" id="cfg-rand">🎲 Aleatorio</button>
+            <button class="chip" id="cfg-reset">↺ Restablecer</button>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ============ TECLADO ============ -->
+      <section id="view-keyboard" class="view" role="tabpanel" aria-labelledby="tab-keyboard" hidden>
+        <div class="hud">
+          <div class="stat"><b id="k-combo">x0</b><span>Combo</span></div>
+          <div class="rank" id="k-rank" aria-live="off"></div>
+          <div class="stat"><b id="k-kps">0</b><span>Teclas/s</span></div>
+          <div class="stat"><b id="k-best">0</b><span>Récord</span></div>
+        </div>
+        <div class="combo-bar" aria-hidden="true"><i id="k-bar"></i></div>
+        <div class="screen"><span id="typed"></span><small id="key-count" title="Pulsaciones">0</small></div>
+        <div class="board" id="board" aria-label="Teclado para pulsar"></div>
+        <div class="themes" id="themes" role="group" aria-label="Sonido de las teclas"></div>
+        <button class="chip rgb-btn" id="k-rgb" aria-label="Cambiar luces RGB">🌈 Arcoíris</button>
+        <div class="floats" id="floats" aria-hidden="true"></div>
+        <p class="hint">Toca las teclas o usa tu teclado físico · no pares para subir el combo · desliza la barra de sonidos</p>
+      </section>
+
+      <!-- ============ COCHES ============ -->
+      <section id="view-cars" class="view" role="tabpanel" aria-labelledby="tab-cars" hidden>
+        <canvas id="cars-canvas" class="game-canvas" aria-label="Juego de coches: esquiva el tráfico"></canvas>
+      </section>
+
+      <!-- ============ FLAPPY ============ -->
+      <section id="view-flappy" class="view" role="tabpanel" aria-labelledby="tab-flappy" hidden>
+        <canvas id="flap-canvas" class="game-canvas" aria-label="Flappy con animales: toca para aletear"></canvas>
+        <div class="animals" id="animals" role="group" aria-label="Elige tu animal"></div>
+      </section>
+      <!-- ============ SERPIENTE ============ -->
+      <section id="view-snake" class="view" role="tabpanel" aria-labelledby="tab-snake" hidden>
+        <canvas id="snake-canvas" class="game-canvas" aria-label="Juego de la serpiente"></canvas>
+      </section>
+
+      <!-- ============ LABERINTO ============ -->
+      <section id="view-pac" class="view" role="tabpanel" aria-labelledby="tab-pac" hidden>
+        <canvas id="pac-canvas" class="game-canvas" aria-label="Laberinto con fantasmas"></canvas>
+      </section>
+
+      <!-- ============ BLOQUE ============ -->
+      <section id="view-blox" class="view" role="tabpanel" aria-labelledby="tab-blox" hidden>
+        <canvas id="blox-canvas" class="game-canvas" aria-label="Rueda el bloque hasta el hueco"></canvas>
+        <div class="gamebar">
+          <button id="blox-new">🎲 Nivel nuevo</button>
+          <button id="blox-reset">↺ Reiniciar</button>
+        </div>
+      </section>
+
+      <!-- ============ RUBIK ============ -->
+      <section id="view-rubik" class="view" role="tabpanel" aria-labelledby="tab-rubik" hidden>
+        <div class="rb-hud">
+          <div><b id="rb-moves">0</b><span>Movimientos</span></div>
+          <div><b id="rb-time">0:00</b><span>Tiempo</span></div>
+          <div><b id="rb-best">–</b><span>Récord</span></div>
+        </div>
+        <div class="rb-stage" id="rb-stage" aria-label="Cubo de Rubik: arrastra una cara para girarla">
+          <div class="rb-cube" id="rb-cube"></div>
+        </div>
+        <p class="rb-msg" id="rb-msg" hidden></p>
+        <p class="hint">Arrastra una cara para girar esa fila · arrastra el fondo para rotar el cubo · teclas U D L R F B (con Mayús, al revés)</p>
+        <div class="gamebar">
+          <button id="rb-shuffle">🔀 Mezclar</button>
+          <button id="rb-reset">↺ Reiniciar</button>
+        </div>
+      </section>
+
+      <!-- ============ CHICLE ============ -->
+      <section id="view-chicle" class="view" role="tabpanel" aria-labelledby="tab-chicle" hidden>
+        <canvas id="chi-canvas" class="chi-canvas" aria-label="Una cara elástica: agárrala y estírala"></canvas>
+        <div class="animals" id="chi-faces" role="group" aria-label="Elige una cara"></div>
+        <p class="hint">Agarra la cara y estírala como un chicle · suelta y rebota</p>
+        <div class="chi-opts">
+          <div class="chi-g" id="chi-tone-grp"><small>Piel</small><span class="chi-g" id="chi-tones"></span></div>
+          <div class="chi-g"><small>Fondo</small><span class="chi-g" id="chi-bgs"></span></div>
+          <label class="chi-g"><small>Chicle</small><input type="range" id="chi-el" min="1" max="5" step="1" aria-label="Elasticidad"><small>Rebote</small></label>
+          <button class="chip" id="chi-rand">🎲 Aleatorio</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
